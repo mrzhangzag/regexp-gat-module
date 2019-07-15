@@ -1,6 +1,6 @@
 {
   "name": "regexp-gat-module",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "RegExp module",
   "main": "dist/regExpModule.umd.min.js",
   "scripts": {
@@ -8,6 +8,11 @@
     "serve": "vue-cli-service serve ./main.js --open",
     "build": "vue-cli-service build --name regExpModule --entry ./src/regExpModule.js --target lib"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrzhangzag/regexp-gat-module.git"
+  },
+  "homepage": "https://github.com/mrzhangzag/regexp-gat-module.git",
   "keywords": [
     "regExp"
   ],

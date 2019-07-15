@@ -148,6 +148,36 @@ let regExpObj = {
     let check = /iphone/i
 
     return check.test(data)
+  },
+  // 校检 微信号，6至20位，以字母开头，字母，数字，减号，下划线
+  checkWxName: function (data) {
+    let check = /^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/
+
+    return check.test(data)
+  },
+  // 校检 新能源车牌号
+  checkCarIdNe: function (data) {
+    let check = /[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(([0-9]{5}[DF])|([DF][A-HJ-NP-Z0-9][0-9]{4}))$/
+
+    return check.test(data)
+  },
+  // 校检 非新能源车牌号
+  checkCarId: function (data) {
+    let check = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/
+
+    return check.test(data)
+  },
+  // 校检 车牌号(新能源+非新能源)
+  checkCarIdAll: function (data) {
+    let check = /^([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(([0-9]{5}[DF])|([DF]([A-HJ-NP-Z0-9])[0-9]{4})))|([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9 挂学警港澳]{1})$/
+
+    return check.test(data)
+  },
+  // 校检 银行卡号（16或19位）
+  checkBankCard: function (data) {
+    let check = /^([1-9]{1})(\d{15}|\d{18})$/
+
+    return check.test(data)
   }
 }
 

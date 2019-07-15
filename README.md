@@ -53,3 +53,13 @@
 #### 校检 从 UA（navigator.userAgent） 中判断是否为苹果系统
     let ua = navigator.userAgent
     rgm.checkIsIphone(ua)
+#### 校检 微信号，6至20位，以字母开头，字母，数字，减号，下划线
+    rgm.checkWxName('xxx')
+#### 校检 新能源车牌号
+    rgm.checkCarIdNe('xxx')
+#### 校检 非新能源车牌号
+    rgm.checkCarId('xxx')
+#### 校检 车牌号(新能源+非新能源)
+    rgm.checkCarIdAll('xxx')
+#### 校检 银行卡号（16或19位）
+    rgm.checkBankCard('xxx')
